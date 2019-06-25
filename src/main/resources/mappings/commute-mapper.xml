@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="commute">
+
+<insert id="insertCommte" parameterType="commute">
+    INSERT INTO ClockInAndOut (IN_TIME, OUT_TIME, USER_ID, USER_NAME)
+		VALUES (NOW(), NULL, #{USER_ID}, #{USER_NAME})
+</insert>
+
+<update id="updateCommute" parameterType="commute">
+    UPDATE ClockInAndOut SET OUT_TIME = NOW() 
+</update>
+
+
+   
+   
+
+</mapper>
